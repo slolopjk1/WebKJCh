@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>html form</title>
+</head>
+
+<body>
+    <form action="http://localhost/login.php" method="GET">
+        <!-- <table>
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <p>
+                        <input type="text" name="id" placeholder="200">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>패스워드</td>
+                <td>
+                    <p>
+                        <input type="password" name="password">
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <p>textarea:
+            <textarea name="" id="" cols="30" rows="10" placeholder="데이터를 입력해주세요"></textarea>
+        </p> -->
+
+        <!-- <h1>색상</h1>
+        <select name="color">
+            <option value="red">붉은색</option>
+            <option value="blue">파란색</option>
+            <option value="green">초록색</option>
+        </select>
+
+        <h1>색상2 다중선택</h1>
+        <select name="color2" multiple>
+            <option value="red">붉은색</option>
+            <option value="blue">파란색</option>
+            <option value="green">초록색</option>
+        </select>
+
+        <input type="submit"> -->
+        <p>
+            <h1>color</h1>
+            빨강:<input type="radio" name="color">
+            파랑:<input type="radio" name="color">
+            검정:<input type="radio" name="color">
+        </p>
+
+        <p>
+            <h1>사이즈 다중선택</h1>
+            초록:<input type="checkbox" name="size" value="10">
+            노랑:<input type="checkbox" name="size" value="11" checked>
+            주황:<input type="checkbox" name="size" value="12">
+        </p>
+        <input type="submit" value="감사">
+    </form>
+</body>
+
+</html>
