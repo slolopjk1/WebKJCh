@@ -1,0 +1,19 @@
+레이아웃 정리
+position
+
+상대레이아웃
+relative
+
+절대레이아웃
+absolute
+
+고정레이아웃
+fixed
+
+
+div 정렬
+float
+
+궁극의 레이아웃 flex
+dispaly: flex
+여러 속성사용
