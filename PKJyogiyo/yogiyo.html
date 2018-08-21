@@ -7,145 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        html, body{
-            height: 100%;
-            width: 100%;
-            margin: 0;
-        }
-        .header {
-            background-color: rgb(236, 47, 47);
-            color: white;
-            /* height: 50px; */
-            text-align: left;
-            line-height: 50px;
-        }
-
-        .title {
-            display: inline;
-            margin-left: 50px;
-        }
-
-        #login,
-        #userin {
-            border: 1px solid white;
-            text-align: right;
-            font-size: 7px;
-            left: 5rem;
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        #table_login {
-            float: right;
-            line-height: 20px;
-            margin: 13px 0px;
-            margin-right: 50px;
-        }
-
-        #cookimg:after {
-            content: '';
-            z-index:-1;
-            position: absolute;
-            top: 35px;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            filter: blur(1.3 px);
-            background-image: url("../image/chiken.png");
-            align-self: center;
-            background-position: center;
-            height: 100px;
-            border-top: 1px solid red;
-            display: inline-block;
-            
-        }
-
-        #searchtotal{
-            text-align: center;
-        }
-
-        .textlogo {
-            color: white;
-            text-align: center;
-            margin: 0.5%
-        }
-
-        .logospan {
-            color: gold;
-        }
-
-        .btn {
-            background-color: white;
-            display: inline-block;
-            box-sizing: border-box;
-            width: 1.5rem;
-            height: 1.5rem;
-            border: 0;
-            outline: 0;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 0.8rem;
-            background-image: url("../image/gps.png");
-            text-align: center;
-        }
-        #search{
-            width: 13rem;
-            height: 1.5rem;
-            vertical-align: top;
-            display: inline-block;
-            box-sizing: border-box;
-            margin-right: -6px;
-        }
-        #searchbtn{
-            display: inline-block;
-            box-sizing: border-box;
-            vertical-align: top;
-            height: 1.5rem;
-            width: 2rem;
-            font-size: 9px;
-            color: white;
-            border: 0;
-            background-color: orange 
-        }
-        .row{
-            width: 90%;
-            height: 90%;
-  margin: 1PX auto;
-
-        }
-        .row:before, .row:after{
-            content: "";
-            display: table;
-            margin-top: 5px;
-        }
-        .row:after{
-            clear: both;
-        }
-        .col{
-            background-image: url("../image/pizza.png");
-            box-sizing: border-box;
-            background-position: center;
-            background-repeat: no-repeat;
-            max-width: 80%;
-            min-width: 20%;
-            min-width: 150px;
-            height: 150px;
-            background-size: 5rem;
-            border:1px solid gray;
-            /* padding: 5px 10px 5px; */
-            margin: 5px 10px 30px;
-            float: left;
-        }
     </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
         <div class="header">
-            <h2 class="title">요기요</h1>
+            <h1 class="title">요기요</h1>
                 <table id="table_login">
                     <tr class="button_login">
                         <td id="login">
@@ -159,7 +28,7 @@
         </div>
     <div id="cookimg">
         <div id="searchtotal">
-            <h2 id="aa" class="textlogo">"어디로
+            <h1 id="aa" class="textlogo">"어디로
                 <span class="logospan">배달</span>해 드릴까요"</h1>
                 <h6 class="textlogo">배달받으실 동 이름으로 검색해주세요</h6>
                 <button class="btn" id="gps" title="위치"></button>
@@ -170,15 +39,47 @@
     </header>   
     <main>
         <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"> </div>
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col"></div>
+            <div class="col" style="background-color: rgb(236, 47, 47)"><h4 class="menutext">치킨</h4><h6 class="menutext2">Chicken</h6></div>
+            <div class="col" style="background-color: rgb(255, 208, 0)"><h4 class="menutext">치킨</h4><h6 class="menutext2">Chicken</h6></div>
+            <div class="col" style="background-image: url('../image/menu1.png')"><h4 class="menutext">프렌차이즈</h4><h6 class="menutext2">Franchise</h6></div>
+            <div class="col" style="background-image: url('../image/menu10.png')"><h4 class="menutext">치킨</h4><h6 class="menutext2">Chicken</h6></div>
+            <div class="col" style="background-image: url('../image/menu.png')"><h4 class="menutext">전체보기</h4><h6 class="menutext2">View All</h6></div>
+            <div class="col" style="background-image: url('../image/menu2.png')"><h4 class="menutext">피자/서양식</h4><h6 class="menutext2">Pizza/Western Food</h6></div>
+            <div class="col" style="background-image: url('../image/menu4.png')"><h4 class="menutext">중국집</h4><h6 class="menutext2">Chinese Food</h6></div>
+            <div class="col" style="background-image: url('../image/menu5.png')"><h4 class="menutext">한식</h4><h6 class="menutext2">Korean Food</h6></div>
+            <div class="col" style="background-image: url('../image/menu6.png')"><h4 class="menutext">일식/돈까스</h4><h6 class="menutext2">Japanese Food</h6></div>
+            <div class="col" style="background-image: url('../image/menu7.png')"><h4 class="menutext">족발/보쌈</h4><h6 class="menutext2">Jokbal/Bossam</h6></div>
+            <div class="col" style="background-image: url('../image/menu8.png')"><h4 class="menutext">야식</h4><h6 class="menutext2">Late Night Snack</h6> </div>
+            <div class="col" style="background-image: url('../image/menu9.png')"><h4 class="menutext">분식</h4><h6 class="menutext2">Carb Snacks</h6></div>
+            <div class="col" style="background-image: url('../image/menu11.png')"><h4 class="menutext">카페/디저트</h4><h6 class="menutext2">Cafe/Dessert</h6></div>
+            <!-- <div class="col"><h4 class="menutext">치킨</h4><h6 class="menutext2">Chicken</h6></div> -->
         </div>
     </main>
+    <footer>
+        <div class="footermenu">
+            <ul>
+                <li>이용약관</li>
+                <li>개인정보처리방침</li>
+                <li>통합포인트 정책</li>
+                <li>채용정보</li>
+                <li>요기요사장님</li>
+                <li>입점문의</li>
+                <li>공지사항</li>
+            </ul>
+        </div>
+        <div class="lastfooter">
+                    
+                <h4>(유)알지피코리아</h4>
+                <p>
+                    서울시 강남구 테헤란로 5길 7 KG타워 10, 11, 12층 유한회사 알지피코리아|대표자 : 강신봉|사업자등록번호:211-88-68802 사업자정보확인통신판매업신고:제 2011-서울강남-03322호|개인정보담당자 :
+                    privacy@yogiyo.co.kr|제휴문의 : partnership@rgpkorea.co.kr|고객만족센터 : support@yogiyo.co.kr|호스트서비스사업자 : (주)심플렉스인터넷
+                </p>
+                <p>
+                    유한회사 알지피코리아는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 상품/ 거래정보 및 거래와 관련하여 요기요에 등록된 판매자의 고의 또는 과실로 소비자에게 발생하는 손해에 대해 유한회사 알지피코리아는 책임을
+                    지지 않습니다. 상품 및 거래에 관하여 보다 정확한 정보는 해당 판매자에게 직접 확인하여 주시기 바랍니다. Copyright YOGIYO. All Rights Reserved.
+                </p>
+            </div>
+        
+    </footer>
 </body>
-
 </html>
