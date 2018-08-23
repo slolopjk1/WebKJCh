@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1><a href="">web</a></h1>
+
+    <input type="button" value="dark" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    "
+    >
+
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    ">
+
+
+    <ul>
+        <li><a href="">asd</a></li>
+        <li><a href="">asd</a></li>
+        <li><a href="">asd</a></li>
+    </ul>
+    <input type="button" value="dark" onclick="
+    var target =document.querySelector('body').style;
+    var link=document.getElementsByTagName('a');
+    var i=0;
+    if(this.value==='dark'){
+        while(i<link.length){
+            link[i++].style.color='white';
+        }
+        target.backgroundColor='black';
+        target.color='white';
+        this.value='day';
+    }
+    else{
+        while(i<link.length){
+            console.log(link[i]);
+            link[i++].style.color='black';
+        }
+        target.backgroundColor='white';
+        target.color='black';
+        this.value='dark';
+    }
+    ">
+    <h2 style="background-color: powderblue">JavaScript</h2>
+
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, illum! Recusandae necessitatibus cumque magni id. Velit cum commodi, laborum officiis distinctio nemo tempora ea quidem delectus ex quis? Deleniti, repellendus.
+        Quisquam fuga laudantium suscipit illum, asperiores omnis tempore consequuntur minus dolore eos nostrum corrupti accusantium ex quis vel impedit iusto praesentium magni iure eum reiciendis quibusdam dolor. Debitis, corrupti optio.
+        Corporis, laudantium? Natus doloremque deleniti deserunt, sunt tempora qui earum est perspiciatis vero officiis vel nulla laboriosam modi culpa aliquam aut sint aperiam fuga temporibus consequatur, neque explicabo commodi? Modi!
+        Sunt, velit! Fuga voluptatum distinctio at ex? Dicta officia illum quidem magnam possimus ipsa amet sed magni at modi, consequuntur esse, facilis voluptatem asperiores laudantium rerum minima dolor quis. Deleniti.
+        Doloremque dignissimos repellendus dolorem atque consectetur delectus nobis ipsam quod numquam obcaecati officia officiis possimus, deserunt distinctio quae nemo veniam laudantium, dolore unde iusto. Ad harum laboriosam perferendis voluptatibus modi!
+        Consequuntur ea sint tempora facilis in cumque eaque impedit magnam fuga dolores accusamus veniam aut alias quibusdam, rem, quasi sit, neque repellendus commodi aliquid tenetur explicabo consequatur quae? Consectetur, nobis.
+        Veritatis autem quasi dolorum nemo expedita debitis nulla similique architecto excepturi cumque repellendus voluptatum velit, laborum nisi, quam itaque odio optio animi necessitatibus maiores harum! Cumque est provident maiores quidem.
+        modi quae qui assumenda doloribus quia maxime recusandae, quis ab illo quod maiores quibusdam ipsum tempore eius perferendis doloremque accusantium sequi nihil expedita? Necessitatibus debitis at impedit enim culpa?
+    </p>
+</body>
+</html>
