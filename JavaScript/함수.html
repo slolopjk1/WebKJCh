@@ -7,34 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-    function setacolor(color){
-        var link=document.getElementsByTagName('a');
-        var i=0;
-        while(i<link.length){
-            link[i++].style.color=color;
-        }
-    }
-    function bodysetcolor(color1,color2){
-        var target =document.querySelector('body').style;
-        target.backgroundColor=color1;
-        target.color=color2;
-    }
-    function darkdayhandler(bb){
-    
-    
-    if(bb.value==='dark'){
-        setacolor('white');
-        bodysetcolor('black','white')
-        bb.value='day';
-    }
-    else{
-        setacolor('black');
-        bodysetcolor('white','black')
-        bb.value='dark';
-    }
-    }
-    </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="color.js"></script>
     <h1><a href="">web</a></h1>
     <ul>
         <li><a href="">asd</a></li>

@@ -1,0 +1,10 @@
+document-태그 리소스 
+dom-document를 담고 있는객체
+window-브라우저 제어
+ajax - 리로드 없이 정보 전송
+cookie-리로드 현재상태유지
+offline web application 
+webRTC-화상통신
+speech-음성
+webGL-3차원 게임
+webVR-가상현실
