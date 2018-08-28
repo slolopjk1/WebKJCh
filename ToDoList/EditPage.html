@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+     .Editbutton{
+        position: absolute;
+            width: 30px;
+            right: 10px;
+            margin-top: 10px;
+            height: 25px;
+            border: none;
+            background-position: center;
+            background-size: 20px;
+            background-color:  rgba(34, 177, 129, 0);
+            background-repeat: no-repeat;
+            background-image: url("image/inputbtn.png");
+            color: white;
+     }
+     .inputtag{
+         border-top-left-radius: 5%;
+         border-top-right-radius: 5%;
+         border-bottom-left-radius: 5%;
+         border-bottom-right-radius: 5%;
+         border: none;
+     }
+     
+     .inputtag::placeholder{
+         color: rgb(168, 167, 167);
+         font-size: 10px;
+     }
+
+     .inputcontenttag{
+        height: 300px;
+        border: none;
+     }
+    </style>
+    <script>
+        var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert(inputValue+"할일을 입력해주세요");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
+
+    
+</head>
+<body class="gradientback">
+    <header>
+            <div class="layout">
+                <div class="greenback"> 
+                <h3 class="title">EditPage</h3>
+                <button class="button"></button>
+                <button class="Editbutton"  onclick="newElement()"></button>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <div class="layout">
+            
+               <input type="text" class="inputtag" id="myInput" placeholder="Title ... " name="" id="">
+        </div>
+        <ul id="myUL">
+                
+              </ul>
+
+    </main>
+
+ 
+</body>
+</html>
