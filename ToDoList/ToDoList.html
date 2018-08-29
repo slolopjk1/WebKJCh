@@ -6,11 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        function NewEditPage(){
-            window.open("EditPage.html","new","width=500,height=500,top=100,left=100"); 
-        }
-    </script>
+    
 </head>
 <body class="gradientback">
     <header>
@@ -26,44 +22,41 @@
     <main>
         <div class="layout">
                 <div class="greeninput"> 
-                        <h5 class="inputtitle">Add to-do ...</h5>
-                        <button class="inputbutton"></button>
+                        <h5 class="inputtitle" id="papa">Add to-do ...</h5>
+                        <button id="inputbutton" name="view" onclick="hiddenUL(this)"></button>
                         <button class="inputbutton2"></button>
-                </div>
+               </div>              
         </div>
+        
+        <script>
+                function NewEditPage(){
+                   window.open("EditPage.html","new","width=500,height=500,top=100,left=100"); 
+                }
+                function hiddenUL(btn){
+                        var hidden=document.getElementById("ThisUL")
+                        if(btn.name=='view'){
+                                hidden.style.display = "none";
+                                btn.name='none';
+                        }
+                        else{
+                                hidden.style.display = "";
+                                btn.name='view';
+                        }
+                }
+        </script>
 
-    </main>
-
-    <!-- <main>
+<main id="ThisUL">
         <div class="layout">
-                <div class="greeninput"> 
-                        <h5 class="inputtitle">Add to-do ...</h5>
-                        <button class="inputbutton"></button>
-                        <button class="inputbutton2"></button>
-                </div>
+               <input type="text" class="inputtag" id="myInput" placeholder="Title ... " name="" id="">
         </div>
-        <div class="layout">
-                <div class="greeninput"> 
-                        <h5 class="inputtitle">Add to-do ...</h5>
-                        <button class="inputbutton"></button>
-                        <button class="inputbutton2"></button>
-                </div>
+        <ul id="myUL" style="padding-left: 5px; padding-right: 5px">
+                
+        </ul>
+        <div class="layout">  
+          <button id="savebtn" onclick="newElement()">Insert</button>
         </div>
-        <div class="layout">
-                <div class="greeninput"> 
-                        <h5 class="inputtitle">Add to-do ...</h5>
-                        <button class="inputbutton"></button>
-                        <button class="inputbutton2"></button>
-                </div>
-        </div>
-        <div class="layout">
-                <div class="greeninput"> 
-                        <h5 class="inputtitle">Add to-do ...</h5>
-                        <button class="inputbutton"></button>
-                        <button class="inputbutton2"></button>
-                </div>
-        </div>
-    </main> -->
-
+        <script src="ToDo.js"></script>
+</main>
+</main>
 </body>
 </html>
