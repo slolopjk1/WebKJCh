@@ -101,4 +101,43 @@ function deleteItem(donelist){
     document.getElementById('li_'+ listItemId).style.display="none";
 }
 
+function solution(n,money) {
+    var answer = 0;
 
+    //정렬 내림차순
+    //     score.sort(function(a, b) {
+    //     return b - a;
+    // });
+    for(var i=0; i<money.length; i++){
+        if(n>=money[i]){
+            var result=parseInt(n/money[i]);
+            if(result>0){
+            for(var j=result; j>0; j--){
+                var num=n%(money[i]*j);
+                if(num==0){
+                    answer++;
+                    alert('나누는수:'+money[i] +'몫:'+ j +'나눠진 개수:'+answer);
+                }
+            
+                else{
+                    var remoney = [];
+                    for(var k=0; k<money.length-i-1; k++){
+                     remoney[k] = money[i+k+1];   
+                    }
+                    // alert('나누는수:'+money[i] +'몫:'+ result +'나머지:'+ num +'나눠진 개수:'+answer);
+                    // alert(money[i]+'재귀함수 호출'); 
+                    alert(remoney.length)
+
+                    answer=answer+solution(num,remoney);
+                }
+            }
+            }
+        }
+        // else{
+        //     continue;
+        // }
+    }
+       
+    alert(answer);
+    return answer;
+}
