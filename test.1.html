@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       function solution(arr) {
+    var answer = 1;
+    var testarr = [];
+    var testtwoarr =[];
+    var count =0;
+    var count2 =0;
+    var i,j,k,g,h,p,m;
+    for(i=0; i<98; i++){
+        testarr[i]=i+2; 
+    }
+    for(j = 0 ; j<testarr.length; j++){
+        count=0;
+        for(k=1; k<=testarr[j]; k++){
+            if(testarr[j]%k==0){
+                count++;
+            }
+        }
+        if(count==2){
+            testtwoarr=testarr[j];
+        }
+    }
+
+    
+    for(g =0; g<testtwoarr.length; g++){
+        if(arr[arr.length-1]>=testtwoarr[g]){
+        for(h =0; h<arr.length; h++){
+            if(arr[h]%testtwoarr[g]==0){
+                count2++;
+            }
+        }
+        if(count2>=2){
+            for(p =0; p<arr.length; p++){
+                    if(arr[p]%testtwoarr[g]==0 &&arr[p]>=testtwoarr[g]){
+                    arr[p]=arr[p]/testtwoarr[g];
+                    alert(arr[m]);
+                }
+            }
+        }else{
+                continue;
+            }
+        }
+        else{
+            break;
+        }
+    }
+    for(m=0; m<arr.length; m++){
+        answer*=arr[m];
+        
+    }
+    
+    // alert(answer);
+    return answer;
+}
+solution([2,6,8,14]);
+    </script>
+
+</body>
+
+</html>
